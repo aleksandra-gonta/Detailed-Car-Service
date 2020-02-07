@@ -1,3 +1,4 @@
+/*This is class creating PriceStatistics object*/
 package org.example.model.data;
 
 import java.math.BigDecimal;
@@ -7,6 +8,7 @@ public class PriceStatistics {
     private BigDecimal min;
     private BigDecimal max;
     private BigDecimal avg;
+
 
     public PriceStatistics(BigDecimal min, BigDecimal max, BigDecimal avg) {
         this.min = min;

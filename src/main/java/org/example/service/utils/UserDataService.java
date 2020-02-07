@@ -1,3 +1,4 @@
+/*This is class allowing retrieving data from users*/
 package org.example.service.utils;
 
 import org.example.exception.AppException;
@@ -21,7 +22,7 @@ public final class UserDataService {
         System.out.println(message);
         return scanner.nextLine();
     }
-
+    /*Method retrieving int value*/
     public static int getInt(String message) {
         System.out.println(message);
 
@@ -32,6 +33,7 @@ public final class UserDataService {
 
         return Integer.parseInt(valueAsString);
     }
+    /*Method retrieving double value*/
     public static double getDouble(String message) {
         System.out.println(message);
 
@@ -42,6 +44,7 @@ public final class UserDataService {
 
         return Double.parseDouble(valueAsString);
     }
+    /*Method retrieving BigDecimal value*/
     public static BigDecimal getBigDecimal(String message) {
         System.out.println(message);
 
@@ -52,7 +55,7 @@ public final class UserDataService {
 
         return new BigDecimal(valueAsString);
     }
-
+    /*Method retrieving sorting value*/
     public static OrderBy getOrderBy() {
 
         AtomicInteger counter = new AtomicInteger(1);
@@ -66,7 +69,7 @@ public final class UserDataService {
         }
         return OrderBy.values()[option - 1];
     }
-
+    /*Method retrieving car body type*/
     public static CarBodyType getCarBodyType() {
 
         AtomicInteger counter = new AtomicInteger(1);
@@ -81,6 +84,7 @@ public final class UserDataService {
         }
         return CarBodyType.values()[option - 1];
     }
+    /*Method retrieving engine type*/
     public static EngineType getEngineType() {
 
         AtomicInteger counter = new AtomicInteger(1);
@@ -95,6 +99,7 @@ public final class UserDataService {
         }
         return EngineType.values()[option - 1];
     }
+    /*Method retrieving type of car statistics*/
     public static CarStatistics getCarStatistics() {
 
         AtomicInteger counter = new AtomicInteger(1);
@@ -109,12 +114,12 @@ public final class UserDataService {
         }
         return CarStatistics.values()[option - 1];
     }
-
+    /*Method retrieving boolean value*/
     public static boolean getBoolean(String message) {
         System.out.println(message + " [y/n]");
         return scanner.nextLine().toLowerCase().equals("y");
     }
-
+    /*Method closing scanner*/
     public static void close() {
         if (scanner != null) {
             scanner.close();

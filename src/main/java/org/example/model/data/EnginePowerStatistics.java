@@ -1,3 +1,4 @@
+/*This is class creating EnginePower Statistics object*/
 package org.example.model.data;
 
 public class EnginePowerStatistics {

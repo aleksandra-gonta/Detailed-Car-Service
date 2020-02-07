@@ -1,3 +1,4 @@
+/*This is generic class to deal with statistics objects*/
 package org.example.model.data;
 
 public class Data<T> {

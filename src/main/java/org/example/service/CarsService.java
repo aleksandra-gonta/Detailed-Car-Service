@@ -1,3 +1,4 @@
+/*This class contains methods allowing car service management*/
 package org.example.service;
 
 import org.eclipse.collections.impl.collector.BigDecimalSummaryStatistics;
@@ -25,6 +26,7 @@ public class CarsService {
         this.cars = parseAndValidateCars(jsonFilename);
     }
 
+    /*Method parsing and validating car objects form JSON file*/
     private static Set<Car> parseAndValidateCars(String jsonFilename) {
 
         if (jsonFilename == null) {
@@ -50,7 +52,7 @@ public class CarsService {
                 }).collect(Collectors.toSet());
     }
 
-
+    /*Method sorting cars by chosen factor, ASC or DESC*/
     public List<Car> sortBy(OrderBy orderBy, boolean descending) {
         List<Car> orderedCars = switch (orderBy) {
 
@@ -80,7 +82,7 @@ public class CarsService {
         return orderedCars;
 
     }
-
+    /*Method returning list of cars with particular body type within the price range*/
     public List<Car> findCarsBodyTypeInThePriceRange(CarBodyType type, BigDecimal minPrice, BigDecimal maxPrice) {
 
 
@@ -92,6 +94,7 @@ public class CarsService {
 
 
     }
+    /*Method returning list of cars with particular engine type*/
 
     public List<Car> findCarsWithEngineType(EngineType type) {
 
@@ -103,7 +106,7 @@ public class CarsService {
 
     }
 
-
+    /*Method returning chosen statistics*/
     public Data calculateCarsStatistics(CarStatistics statistics) {
 
         switch (statistics) {
@@ -133,7 +136,7 @@ public class CarsService {
 
     }
 
-
+    /*Method returning map of cars and their mileage*/
     public Map<Car, Double> showCarsAndTheirMileage() {
         return cars
                 .stream()
@@ -143,7 +146,7 @@ public class CarsService {
                 .collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue, Double::max, LinkedHashMap::new));
     }
 
-
+    /*Method returning cars grouped by tyre types*/
     public Map<TyreType, List<Car>> showCarsTyreType() {
 
 
@@ -156,7 +159,7 @@ public class CarsService {
 
 
     }
-
+    /*Method returning list of cars with particular car components*/
     public List<Car> showCarsContainingComponents(List<String> components) {
 
         return cars

@@ -1,3 +1,4 @@
+/*This is class creating carBody object*/
 package org.example.model;
 
 import lombok.*;

@@ -1,3 +1,4 @@
+/*This is class creating wheel object*/
 package org.example.model;
 
 import lombok.*;
